@@ -192,6 +192,9 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/voltage/overlay/common \
     vendor/voltage/overlay/no-rro
 
+PRODUCT_PACKAGES += \
+    NetworkStackOverlay \
+
 # Filesystems tools
 PRODUCT_PACKAGES += \
     fsck.ntfs \
