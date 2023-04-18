@@ -194,6 +194,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     NetworkStackOverlay \
+    DocumentsUIOverlay \
 
 # Filesystems tools
 PRODUCT_PACKAGES += \
