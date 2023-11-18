@@ -215,6 +215,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     setupwizard.theme=glif_v4 \
     setupwizard.feature.day_night_mode_enabled=true
 
+# Cloned app exemption
+PRODUCT_COPY_FILES += \
+    vendor/voltage/prebuilt/common/etc/sysconfig/preinstalled-packages-platform-voltage-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-voltage-product.xml
+
 # Versioning
 include vendor/voltage/config/version.mk
 
