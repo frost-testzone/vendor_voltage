@@ -44,7 +44,13 @@ PRODUCT_PACKAGES += \
     OnePlusSans-Regular.ttf \
     OnePlusSans-Thin.ttf \
     OnePlusSans-ThinItalic.ttf \
-    SanFranciscoDisplayPro.ttf
+    SanFranciscoDisplayPro.ttf \
+    FluidSans-Bold.ttf \
+    FluidSans-BoldItalic.ttf \
+    FluidSans-Italic.ttf \
+    FluidSans-Medium.ttf \
+    FluidSans-MediumItalic.ttf \
+    FluidSans-Regular.ttf
 
 # Register new fonts
 PRODUCT_COPY_FILES += \
