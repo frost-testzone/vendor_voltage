@@ -50,7 +50,6 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/voltage/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/voltage/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/voltage/prebuilt/common/bin/50-voltage.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-voltage.sh
 
 ifneq ($(strip $(AB_OTA_PARTITIONS) $(AB_OTA_POSTINSTALL_CONFIG)),)
 PRODUCT_COPY_FILES += \
