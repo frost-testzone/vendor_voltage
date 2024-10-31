@@ -12,6 +12,13 @@ prebuilt_etc_xml {
     schema: ":spn-schema",
 }
 
+prebuilt_etc_xml {
+    name: "voltage-component-overrides.xml",
+    product_specific: true,
+    src: "etc/voltage-component-overrides.xml",
+    sub_dir: "sysconfig",
+}
+
 android_app_import {
     name: "Gramophone",
     apk: "Gramophone/Gramophone.apk",
