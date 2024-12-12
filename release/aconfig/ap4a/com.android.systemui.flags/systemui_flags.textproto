@@ -18,3 +18,17 @@ flag_value {
   state: ENABLED
   permission: READ_ONLY
 }
+
+flag_value {
+  package: "com.android.systemui"
+  name: "migrate_clocks_to_blueprint"
+  state: DISABLED
+  permission: READ_ONLY
+}
+
+flag_value {
+  package: "com.android.systemui"
+  name: "communal_hub"
+  state: DISABLED
+  permission: READ_ONLY
+}
