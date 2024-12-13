@@ -80,7 +80,7 @@ function breakfast()
         else
             # This is probably just the VoltageOS model name
             if [ -z "$variant" ]; then
-                variant="userdebug"
+                variant="user"
             fi
 
             lunch voltage_$target-$aosp_target_release-$variant
