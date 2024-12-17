@@ -213,4 +213,7 @@
         <item>"com.android.phone"</item>
     </string-array>
 
+    <!-- circle to search -->
+    <string name="config_defaultContextualSearchPackageName" translatable="false">com.google.android.googlequicksearchbox</string>
+
 </resources>
