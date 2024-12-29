@@ -138,6 +138,16 @@ SYSTEM_OPTIMIZE_JAVA ?= true
 SYSTEMUI_OPTIMIZE_JAVA ?= true
 FULL_SYSTEM_OPTIMIZE_JAVA ?= true
 
+# Pif
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.sys.pihooks_BRAND?=google \
+    persist.sys.pihooks_MANUFACTURER?=Google \
+    persist.sys.pihooks_DEVICE?=tokay \
+    persist.sys.pihooks_PRODUCT?=tokay_beta \
+    persist.sys.pihooks_DEVICE_INITIAL_SDK_INT?=25 \
+    persist.sys.pihooks_SECURITY_PATCH?=2024-09-05 \
+    persist.sys.pihooks_ID?=AP41.240823.009
+
 # Storage manager
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.storage_manager.enabled=true
