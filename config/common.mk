@@ -46,6 +46,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += log.tag=I
 endif
 
+# Disable default frame rate limit for games
+PRODUCT_PRODUCT_PROPERTIES += \
+    debug.graphics.game_default_frame_rate.disabled=true
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/voltage/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
