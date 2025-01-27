@@ -177,9 +177,6 @@ endif
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
 
--include $(WORKSPACE)/build_env/image-auto-bits.mk
--include vendor/voltage/config/partner_gms.mk
-
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/voltage/overlay/no-rro
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/voltage/overlay/common \
@@ -197,17 +194,6 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/mount.ntfs \
     system/%/libfuse-lite.so \
     system/%/libntfs-3g.so
-
-# Face Unlock
-#TARGET_FACE_UNLOCK_SUPPORTED ?= true
-#ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
-#PRODUCT_PACKAGES += \
-#    FaceUnlockService
-#PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-#    ro.face_unlock_service.enabled=$(TARGET_FACE_UNLOCK_SUPPORTED)
-#PRODUCT_COPY_FILES += \
-#    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
-#endif
 
 # Themes
 PRODUCT_PACKAGES += \
@@ -234,9 +220,6 @@ include vendor/voltage/config/version.mk
 
 # BootAnimation
 include vendor/voltage/config/bootanimation.mk
-
-# Certification
-$(call inherit-product-if-exists, vendor/certification/config.mk)
 
 # Fonts
 $(call inherit-product, vendor/voltage/fonts/fonts.mk)
