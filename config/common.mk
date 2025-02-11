@@ -195,6 +195,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     NetworkStackOverlay \
     DocumentsUIOverlay \
+    PermissionControllerOverlay \
 
 # Filesystems tools
 PRODUCT_PACKAGES += \
