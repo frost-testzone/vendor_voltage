@@ -145,13 +145,13 @@ FULL_SYSTEM_OPTIMIZE_JAVA ?= true
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.pihooks_BRAND?=google \
     persist.sys.pihooks_MANUFACTURER?=Google \
-    persist.sys.pihooks_DEVICE?=comet \
-    persist.sys.pihooks_PRODUCT?=comet_beta \
-    persist.sys.pihooks_DEVICE_INITIAL_SDK_INT?=35 \
-    persist.sys.pihooks_SECURITY_PATCH?=2025-01-06 \
-    persist.sys.pihooks_ID?=BP11.241121.013 \
-    persist.sys.pihooks_FINGERPRINT?=google/comet_beta/comet:15/BP11.241121.013/12873528:user/release-keys \
-    persist.sys.pihooks_MODEL?=Pixel 9 Pro Fold
+    persist.sys.pihooks_DEVICE?=tokay \
+    persist.sys.pihooks_PRODUCT?=tokay_beta \
+    persist.sys.pihooks_DEVICE_INITIAL_SDK_INT?=21 \
+    persist.sys.pihooks_SECURITY_PATCH?=2025-02-05 \
+    persist.sys.pihooks_ID?=BP22.250124.009 \
+    persist.sys.pihooks_FINGERPRINT?=google/tokay_beta/tokay:Baklava/BP22.250124.009/13034193:user/release-keys \
+    persist.sys.pihooks_MODEL?=Google Pixel 9
 
 # Storage manager
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
