@@ -21,6 +21,7 @@ PRODUCT_PACKAGES += \
     talkback \
     LMOFreeform \
     LMOFreeformSidebar \
+    NetworkLocation \
 
 ifeq ($(VOLTAGE_BUILD_TYPE),OFFICIAL)
     PRODUCT_PACKAGES += \
