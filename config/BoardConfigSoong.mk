@@ -70,14 +70,6 @@ SOONG_CONFIG_NAMESPACES += voltageNvidiaVars
 SOONG_CONFIG_voltageNvidiaVars += \
     uses_nv_enhancements
 
-SOONG_CONFIG_NAMESPACES += voltageQcomVars
-
-# Only create display_headers_namespace var if dealing with UM platforms to avoid breaking build for all other platforms
-ifneq ($(filter $(UM_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
-SOONG_CONFIG_voltageQcomVars += \
-    qcom_display_headers_namespace
-endif
-
 # Soong bool variables
 SOONG_CONFIG_voltageGlobalVars_camera_override_format_from_reserved := $(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED)
 SOONG_CONFIG_voltageGlobalVars_gralloc_handle_has_custom_content_md_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE)
@@ -139,9 +131,3 @@ SOONG_CONFIG_voltageGlobalVars_target_trust_usb_control_path := $(TARGET_TRUST_U
 SOONG_CONFIG_voltageGlobalVars_target_trust_usb_control_enable := $(TARGET_TRUST_USB_CONTROL_ENABLE)
 SOONG_CONFIG_voltageGlobalVars_target_trust_usb_control_disable := $(TARGET_TRUST_USB_CONTROL_DISABLE)
 SOONG_CONFIG_voltageGlobalVars_target_camera_package_name := $(TARGET_CAMERA_PACKAGE_NAME)
-
-ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
-SOONG_CONFIG_voltageQcomVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
-else
-SOONG_CONFIG_voltageQcomVars_qcom_display_headers_namespace := $(QCOM_SOONG_NAMESPACE)/display
-endif
