@@ -251,5 +251,8 @@ $(call inherit-product, vendor/voltage/audio/audio.mk)
 # Icon packs
 $(call inherit-product, vendor/voltage/themes/icon_packs/icon_packs.mk)
 
+# GameProps
+include vendor/voltage/config/game_props.mk)
+
 # Include extra packages
 include vendor/voltage/config/packages.mk
