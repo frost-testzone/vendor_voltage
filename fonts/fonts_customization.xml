@@ -218,6 +218,21 @@
     </font>
   </family>
 
+    <family name="Rookery-Regular" customizationType="new-named-family">
+         <font weight="400" style="normal" postScriptName="RookeryNew-Regular">
+             Rookery-Regular.otf
+         </font>
+         <font weight="500" style="normal" postScriptName="RookeryNew-Medium">
+             Rookery-Medium.otf
+         </font>
+         <font weight="700" style="normal" postScriptName="RookeryNew-Bold">
+             Rookery-Bold.otf
+         </font>
+         <font weight="400" style="italic" postScriptName="Rookery-Italic">
+             Rookery-Italic.otf
+         </font>
+     </family>
+
     <family customizationType="new-named-family" name="manrope">
         <font weight="500" style="normal">Manrope-VF.ttf
             <axis tag="wght" stylevalue="500"/>

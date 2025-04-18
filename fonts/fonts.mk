@@ -34,5 +34,6 @@ PRODUCT_PACKAGES += \
     FontLinotteOverlay \
     FontFucekOverlay \
     FontGoogleSansOverlay \
+    FontRookeryOverlay \
     FontOnePlusSansOverlay \
     FontSanFranciscoDisplayProSourceOverlay

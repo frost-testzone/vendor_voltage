@@ -28,6 +28,10 @@ PRODUCT_PACKAGES += \
     GoogleSans-Regular.ttf \
     GoogleSans-Italic.ttf \
     GoogleSansFlex-Regular.ttf \
+    Rookery-Regular.otf \
+    Rookery-Bold.otf \
+    Rookery-Italic.otf \
+    Rookery-Medium.otf \
     OnePlusSans-Black.ttf \
     OnePlusSans-Bold.ttf \
     OnePlusSans-BlackItalic.ttf \
