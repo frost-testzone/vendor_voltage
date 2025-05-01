@@ -40,7 +40,6 @@ SOONG_CONFIG_voltageGlobalVars += \
     target_camera_package_name \
     target_init_vendor_lib \
     target_ld_shim_libs \
-    target_power_libperfmgr_mode_extension_lib \
     uses_legacy_fd_fbdev \
     target_trust_usb_control_path \
     target_trust_usb_control_enable \
@@ -66,7 +65,6 @@ BOOTLOADER_MESSAGE_OFFSET ?= 0
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
 TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED ?= false
 TARGET_INIT_VENDOR_LIB ?= vendor_init
-TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB ?= libperfmgr-ext
 TARGET_TRUST_USB_CONTROL_PATH ?= /proc/sys/kernel/deny_new_usb
 TARGET_TRUST_USB_CONTROL_ENABLE ?= 1
 TARGET_TRUST_USB_CONTROL_DISABLE ?= 0
@@ -76,7 +74,6 @@ SOONG_CONFIG_voltageGlobalVars_bootloader_message_offset := $(BOOTLOADER_MESSAGE
 SOONG_CONFIG_voltageGlobalVars_additional_gralloc_10_usage_bits := $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS)
 SOONG_CONFIG_voltageGlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
 SOONG_CONFIG_voltageGlobalVars_target_ld_shim_libs := $(subst $(space),:,$(TARGET_LD_SHIM_LIBS))
-SOONG_CONFIG_voltageGlobalVars_target_power_libperfmgr_mode_extension_lib := $(TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB)
 SOONG_CONFIG_voltageGlobalVars_disable_bluetooth_le_read_buffer_size_v2 := $(TARGET_DISABLE_BLUETOOTH_LE_READ_BUFFER_SIZE_V2)
 SOONG_CONFIG_voltageGlobalVars_disable_bluetooth_le_set_host_feature := $(TARGET_DISABLE_BLUETOOTH_LE_SET_HOST_FEATURE)
 SOONG_CONFIG_voltageGlobalVars_target_trust_usb_control_path := $(TARGET_TRUST_USB_CONTROL_PATH)
@@ -119,6 +116,11 @@ ifneq ($(TARGET_POWERSHARE_ENABLED),)
 endif
 ifneq ($(TARGET_POWERSHARE_DISABLED),)
     $(call soong_config_set,lineage_powershare,powershare_disabled,$(TARGET_POWERSHARE_DISABLED))
+endif
+
+# Power HAL
+ifneq ($(TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB),)
+    $(call soong_config_set,power_libperfmgr,mode_extension_lib,$(TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB))
 endif
 
 # Surfaceflinger
