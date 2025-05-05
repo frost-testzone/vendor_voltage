@@ -29,7 +29,6 @@ $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
 SOONG_CONFIG_NAMESPACES += voltageGlobalVars
 SOONG_CONFIG_voltageGlobalVars += \
     bootloader_message_offset \
-    additional_gralloc_10_usage_bits \
     camera_needs_client_info_lib \
     camera_needs_client_info_lib_oplus \
     disable_bluetooth_le_read_buffer_size_v2 \
@@ -56,11 +55,9 @@ SOONG_CONFIG_voltageGlobalVars_camera_needs_client_info_lib_oplus := $(TARGET_CA
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
-TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
 
 # Soong value variables
 SOONG_CONFIG_voltageGlobalVars_bootloader_message_offset := $(BOOTLOADER_MESSAGE_OFFSET)
-SOONG_CONFIG_voltageGlobalVars_additional_gralloc_10_usage_bits := $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS)
 SOONG_CONFIG_voltageGlobalVars_target_ld_shim_libs := $(subst $(space),:,$(TARGET_LD_SHIM_LIBS))
 SOONG_CONFIG_voltageGlobalVars_disable_bluetooth_le_read_buffer_size_v2 := $(TARGET_DISABLE_BLUETOOTH_LE_READ_BUFFER_SIZE_V2)
 SOONG_CONFIG_voltageGlobalVars_disable_bluetooth_le_set_host_feature := $(TARGET_DISABLE_BLUETOOTH_LE_SET_HOST_FEATURE)
@@ -69,6 +66,11 @@ SOONG_CONFIG_voltageGlobalVars_target_camera_package_name := $(TARGET_CAMERA_PAC
 # Camera
 ifneq ($(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED),)
     $(call soong_config_set,camera,override_format_from_reserved,$(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED))
+endif
+
+# Libui
+ifneq ($(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS),)
+    $(call soong_config_set,libui,additional_gralloc_10_usage_bits,$(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS))
 endif
 
 # Lineage Health HAL
