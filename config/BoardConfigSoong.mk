@@ -15,16 +15,8 @@ EXPORT_TO_SOONG := \
 # Documentation here:
 # https://github.com/VoltageOS/android_build_soong/commit/8328367c44085b948c003116c0ed74a047237a69
 
-SOONG_CONFIG_NAMESPACES += voltageVarsPlugin
-
-SOONG_CONFIG_voltageVarsPlugin :=
-
-define addVar
-  SOONG_CONFIG_voltageVarsPlugin += $(1)
-  SOONG_CONFIG_voltageVarsPlugin_$(1) := $($1)
-endef
-
-$(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
+$(call add_soong_config_namespace,voltageVarsPlugin)
+$(foreach v,$(EXPORT_TO_SOONG),$(eval $(call add_soong_config_var,voltageVarsPlugin,$(v))))
 
 SOONG_CONFIG_NAMESPACES += voltageGlobalVars
 SOONG_CONFIG_voltageGlobalVars += \
