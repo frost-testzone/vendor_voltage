@@ -20,10 +20,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     is_expressive_design_enabled=true
 
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.sf.blurs_are_expensive=1 \
-    ro.surface_flinger.supports_background_blur=1
-
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.clientidbase=android-google
@@ -85,6 +81,8 @@ else
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.custom.blur.enable=false
 endif
+
+PRODUCT_SYSTEM_PROPERTIES += ro.surface_flinger.supports_background_blur=1
 
 # Pixel sysconfig from Pixel XL (Photos)
 PRODUCT_COPY_FILES += \
