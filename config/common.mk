@@ -200,7 +200,6 @@ PRODUCT_PACKAGES += \
     NetworkStackOverlay \
     DocumentsUIOverlay \
     PermissionControllerOverlay \
-    KeyboardNoNavigationBar
 
 # Filesystems tools
 PRODUCT_PACKAGES += \
