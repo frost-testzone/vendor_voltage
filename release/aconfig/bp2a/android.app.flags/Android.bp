@@ -1,5 +1,5 @@
 aconfig_values {
-    name: "aconfig-values-bp1a-android.app.flags-all",
+    name: "aconfig-values-bp2a-android.app.flags-all",
     package: "android.app.flags",
     srcs: [
         "*.textproto",

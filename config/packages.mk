@@ -1,49 +1,8 @@
 # VoltageOS packages
 PRODUCT_PACKAGES += \
-    SimpleDeviceConfig \
-    Covers \
-    Etar \
     ThemePicker \
     AvatarPicker \
     ThemesStub \
-    GmsCompat \
-    GameSpace \
-    Apps \
-    VoltageSetupWizard \
-    Jellyfish \
-    LogViewer \
-    OmniJaws \
-    ParallelSpace \
-    Gramophone \
-    Seedvault \
-    Datura \
-    ExactCalculator \
-    Glimpse \
-    talkback \
-    LMOFreeform \
-    LMOFreeformSidebar \
-    NetworkLocation \
-    AppCompatConfig
-
-ifeq ($(VOLTAGE_BUILD_TYPE),OFFICIAL)
-    PRODUCT_PACKAGES += \
-        Updater
-endif
-
-ifeq ($(VOLTAGE_BUILD_TYPE),OFFICIAL)
-include vendor/voltage-priv/keys/keys.mk
-else
--include vendor/voltage-priv/keys/keys.mk
-endif
-
-ifneq ($(PRODUCT_NO_CAMERA),true)
-PRODUCT_PACKAGES += \
-    Aperture
-endif
-
-# BtHelper
-PRODUCT_PACKAGES += \
-    BtHelper
 
 # Extra tools in Voltage
 PRODUCT_PACKAGES += \
