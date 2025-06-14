@@ -26,5 +26,6 @@ aconfig_value_set {
         "aconfig-values-bp2a-android.app.flags-all",
         "aconfig-values-bp2a-android.hardware.biometrics-all",
         "aconfig-values-bp2a-com.android.window.flags-all",
+        "aconfig-values-bp2a-com.android.systemui.shared-all",
     ],
 }
