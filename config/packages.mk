@@ -1,8 +1,18 @@
 # VoltageOS packages
 PRODUCT_PACKAGES += \
+    Covers \
     ThemePicker \
     AvatarPicker \
     ThemesStub \
+    LogViewer \
+    GmsCompat \
+    NetworkLocation \
+    AppCompatConfig
+
+ifneq ($(PRODUCT_NO_CAMERA),true)
+PRODUCT_PACKAGES += \
+    Aperture
+endif
 
 # Extra tools in Voltage
 PRODUCT_PACKAGES += \
