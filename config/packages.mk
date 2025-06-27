@@ -15,6 +15,12 @@ PRODUCT_PACKAGES += \
     Aperture
 endif
 
+ifeq ($(VOLTAGE_BUILD_TYPE),OFFICIAL)
+include vendor/voltage-priv/keys/keys.mk
+else
+-include vendor/voltage-priv/keys/keys.mk
+endif
+
 # Extra tools in Voltage
 PRODUCT_PACKAGES += \
     awk \
