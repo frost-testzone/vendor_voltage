@@ -8,7 +8,8 @@ PRODUCT_PACKAGES += \
     GmsCompat \
     NetworkLocation \
     AppCompatConfig \
-    SimpleDeviceConfig
+    SimpleDeviceConfig \
+    Datura
 
 ifneq ($(PRODUCT_NO_CAMERA),true)
 PRODUCT_PACKAGES += \
