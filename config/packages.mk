@@ -9,7 +9,8 @@ PRODUCT_PACKAGES += \
     NetworkLocation \
     AppCompatConfig \
     SimpleDeviceConfig \
-    Datura
+    Datura \
+    GameSpace
 
 ifneq ($(PRODUCT_NO_CAMERA),true)
 PRODUCT_PACKAGES += \
