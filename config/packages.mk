@@ -10,7 +10,8 @@ PRODUCT_PACKAGES += \
     AppCompatConfig \
     SimpleDeviceConfig \
     Datura \
-    GameSpace
+    GameSpace \
+    FaceUnlock
 
 ifneq ($(PRODUCT_NO_CAMERA),true)
 PRODUCT_PACKAGES += \
